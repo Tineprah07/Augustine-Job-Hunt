@@ -1,0 +1,20 @@
+{
+  "name": "augustine-job-hunt",
+  "version": "1.0.0",
+  "description": "Personal job application tracker for UK Skilled Worker sponsors",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.3.0"
+  }
+}

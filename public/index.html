@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Augustine's Job Hunt</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/js/directory.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <h1 class="brand">Augustine's Job Hunt</h1>
+      <p class="applied-pill"><strong id="applied-count" class="num">0</strong> applied</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="filters" aria-label="Filters">
+      <input id="search" class="search" type="search" placeholder="Search company or town  ( / )" autocomplete="off" spellcheck="false" aria-label="Search company or town">
+
+      <div class="filter-line">
+        <span class="filter-label">Area</span>
+        <div id="area-chips" class="chips" role="group" aria-label="Area"></div>
+      </div>
+      <div class="filter-line">
+        <span class="filter-label">Match</span>
+        <div id="match-chips" class="chips" role="group" aria-label="Match level"></div>
+      </div>
+      <div class="filter-line">
+        <span class="filter-label">Show</span>
+        <div id="show" class="segmented" role="radiogroup" aria-label="Show">
+          <label><input type="radio" name="show" value="todo" autocomplete="off"><span>Not applied</span></label>
+          <label><input type="radio" name="show" value="applied" autocomplete="off"><span>Applied</span></label>
+          <label><input type="radio" name="show" value="all" autocomplete="off"><span>All</span></label>
+        </div>
+      </div>
+    </section>
+
+    <p id="count" class="count num" aria-live="polite">Loading…</p>
+
+    <ul id="results" class="results"></ul>
+
+    <div id="empty" class="empty" hidden>
+      <p>No companies match these filters.</p>
+      <button id="reset" type="button" class="btn">Reset filters</button>
+    </div>
+
+    <div class="more-wrap">
+      <button id="show-more" type="button" class="btn" hidden>Show more</button>
+    </div>
+  </main>
+</body>
+</html>
